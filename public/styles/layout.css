@@ -10,16 +10,90 @@ html {
   box-sizing: inherit;
 }
 
+
 /*
  * Global layout stuff
  */
 
-body {
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
+
+
+ body {
+  font-size: 1em;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
 }
+
+
+
+/* do stuff here later */
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ 
+ /* nav bar */
+h3.tweet-text {
+  display: flex;
+  font-size: 1.17em;
+  font-weight: lighter;
+  margin: 1.5em;
+}
+#unique {
+  font-size:1.5em;
+  font-family: 'Bungee', cursive;
+  margin: 1.5em;
+  margin-top: 2em;
+}
+i.tweet-text {
+  font-weight: 600;
+}
+.tweet-bar {
+  display: flex;
+  height: 7.75em;
+  color: white;
+  background-color: #4056A1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.tweet-bar a {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+}
+/* end nav */
+
+/* header */
+header>div {
+  border-top: 0.3em solid;
+  border-color: red;
+}
+div.profile-container {
+  border: 0.3em solid;
+  border-color: red;
+  z-index: -1;
+  position:relative;
+  background-color: #b05b00;
+  background-image: url(http://www.transparenttextures.com/patterns/3px-tile.png);  
+}
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: center;
+}
+/* header end */
+
+/* main */
+main.container {
+  display: flex;
+  width: 90%;
+  align-self: center;
+}
+/* main end */

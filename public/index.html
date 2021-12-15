@@ -5,11 +5,16 @@
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
+    <!-- fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
+    
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -19,11 +24,39 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
-    </nav>
+      <nav class="tweet-bar">
+        <span id='unique'><a href="/">tweeter</a></span>
+        <h3 class='tweet-text'><i class='tweet-text'><a href="/">Write</a></i>a new tweet</h3>
+        <!-- <i class="fas fa-angle-double-down"></i> -->
+      </nav>
+      <div class="profile-container">
+        <header>
+          <div>
+              <img class='profile' src="/images/profile-hex.png"> 
+          </div>
+          <br>
+          <div>
+              <h2>Diogenes of Toronto</h2>
+            </div>
+          </header>
+        </div>
+        <!-- Page-specific (main) content here -->
+        <main class="container">
+          <section class="new-tweet">
+            <h2>Compose Tweet</h2>
+            <form>
+              <label for="tweet-text">What are you humming about?</label>
+              <textarea name="text" id="tweet-text"></textarea>
+              <div>
+                <button type="submit">Tweet</button>
+                <output name="counter" class="counter" for="tweet-text">140</output>
+              </div>
+            </form>
+          </section>
+          <!-- <h1>What is Lorem Ipsum?</h1>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+          <h2>Where does it come from?</h2>
+          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</p> -->
+        </main>
   </body>
 </html>

@@ -1,0 +1,30 @@
+h3.tweet-text {
+  display: flex;
+  font-size: 1.17em;
+  font-weight: lighter;
+  margin: 1.5em;
+}
+#unique {
+  font-size:1.5em;
+  font-family: 'Bungee', cursive;
+  margin: 1.5em;
+  margin-top: 2em;
+}
+i.tweet-text {
+  font-weight: 600;
+}
+.tweet-bar {
+  display: flex;
+  height: 7.75em;
+  color: white;
+  background-color: #4056A1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.tweet-bar a {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+}

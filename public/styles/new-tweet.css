@@ -1,0 +1,64 @@
+/* button style */
+button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #5a5858;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 300;
+  color: #3638b8;
+  text-align: center;
+  transition: all 0.2s;
+}
+.bouncy {
+  animation: bouncy 5s infinite linear;
+  animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: bouncy;
+  position: relative;
+}
+  @keyframes bouncy {
+
+  0%{top:0em}
+  40%{top:0em}
+  43%{top:-0.9em}
+  46%{top:0em}
+  48%{top:-0.4em}
+  50%{top:0em}
+  100%{top:0em;}
+  }
+
+  /* button end */
+/* form  */
+form  label {
+    font-size: 2em;
+    border-bottom: 0.15em solid;
+      border-bottom-color: #3638b8; 
+    margin-bottom: 20em;
+  }
+
+section.new-tweet {
+  width: 100%;
+  display: grid;
+
+}
+/* 
+section.new-tweet div {
+  display: flex;
+} */
+output.counter {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: flex-end;
+  align-items: stretch;
+}

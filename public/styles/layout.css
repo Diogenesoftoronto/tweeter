@@ -14,9 +14,6 @@ html {
 /*
  * Global layout stuff
  */
-
-
-
  body {
   font-size: 1em;
   font-family: 'Source Sans Pro', sans-serif;
@@ -26,7 +23,13 @@ html {
   justify-content: center;
 }
 
-
+/* main */
+main.container {
+  display: flex;
+  width: 90%;
+  align-self: center;
+}
+/* main end */
 
 /* do stuff here later */
 
@@ -35,65 +38,3 @@ html {
  */
  
  /* nav bar */
-h3.tweet-text {
-  display: flex;
-  font-size: 1.17em;
-  font-weight: lighter;
-  margin: 1.5em;
-}
-#unique {
-  font-size:1.5em;
-  font-family: 'Bungee', cursive;
-  margin: 1.5em;
-  margin-top: 2em;
-}
-i.tweet-text {
-  font-weight: 600;
-}
-.tweet-bar {
-  display: flex;
-  height: 7.75em;
-  color: white;
-  background-color: #4056A1;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-.tweet-bar a {
-    background-color: transparent;
-    color: white;
-    text-decoration: none;
-}
-/* end nav */
-
-/* header */
-header>div {
-  border-top: 0.3em solid;
-  border-color: red;
-}
-div.profile-container {
-  border: 0.3em solid;
-  border-color: red;
-  z-index: -1;
-  position:relative;
-  background-color: #b05b00;
-  background-image: url(http://www.transparenttextures.com/patterns/3px-tile.png);  
-}
-header {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: space-around;
-  align-items: center;
-}
-/* header end */
-
-/* main */
-main.container {
-  display: flex;
-  width: 90%;
-  align-self: center;
-}
-/* main end */

@@ -10,7 +10,7 @@ h3.tweet-text {
   margin: 1.5em;
   margin-top: 2em;
 }
-i.tweet-text {
+bold.tweet-text {
   font-weight: 600;
 }
 .tweet-bar {
@@ -18,10 +18,10 @@ i.tweet-text {
   height: 7.75em;
   color: white;
   background-color: #4056A1;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  align-content: space-between;
 }
 .tweet-bar a {
     background-color: transparent;

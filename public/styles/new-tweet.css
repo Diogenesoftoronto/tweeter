@@ -62,3 +62,8 @@ output.counter {
   justify-content: flex-end;
   align-items: stretch;
 }
+#tweet-text {
+  margin: 18px;
+  width: 1522px;
+  height: 10em;
+}

@@ -1,10 +1,8 @@
 header>div {
-  border-top: 0.3em solid;
-  border-color: red;
+
 }
 div.profile-container {
-  border: 0.3em solid;
-  border-color: red;
+  margin-top: 7.75em;
   z-index: -1;
   position:relative;
   background-color: #b05b00;

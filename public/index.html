@@ -20,9 +20,10 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type='text/javascript' src='/scripts/composer-char-counter.js'></script>
+
   </head>
 
   <body>
@@ -49,14 +50,42 @@
         <main class="container">
           <section class="new-tweet">
             <h2>Compose Tweet</h2>
-            <form>
+            <form class='tweet-form'>
               <label for="tweet-text">What are you humming about?</label>
               <textarea name="text" id="tweet-text"></textarea>
               <div>
-                <button type="submit" class='bouncy'>Tweet</button>
-                <output method='POST'action='/' name="counter" class="counter" for="tweet-text">140</output>
+                <button id='post-tweet'type="submit" class='bouncy'>Tweet</button>
+                <output method='POST' action='/' name="counter" class="counter" for="tweet-text">140</output>
               </div>
             </form>
+          </section>
+          <section class="tweet-container">
+            <article class="tweet">
+
+              <div class='tweet-header'>
+                <div class='tweet-header-left'>
+                  <img class='profile' src="/images/profile-hex.png">
+                  <h3>Diogenes of Toronto</h3>
+                </div>
+                <div class='tweet-header-right'>
+                  <h4>@Diogenes</h4>
+                </div>
+              </div>
+              <div class='tweet-body'>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</p>
+              </div>
+              <div class='tweet-footer'>
+                <div class='tweet-footer-left'>
+                  <h4>1h</h4>
+                </div>
+                <div class='tweet-footer-right'>
+                  <div>
+                  <a class='tweet-icon' href='/'><i class="fas fa-flag"></i></a>
+                  <a class='tweet-icon' href='/'><i class="fas fa-retweet"></i></a>
+                  <a class='tweet-icon' href='/'><i class="fas fa-heart"></i></a>
+                </div>
+              </div>
+              </article>
           </section>
           <!-- <h1>What is Lorem Ipsum?</h1>
 

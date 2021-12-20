@@ -17,15 +17,16 @@ html {
  body {
   font-size: 1em;
   font-family: 'Source Sans Pro', sans-serif;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: center;
+  justify-content: center; */
 }
+
 
 /* main */
 main.container {
-  display: flex;
+  /* display: flex; */
   width: 90%;
   align-self: center;
 }

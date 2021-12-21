@@ -43,11 +43,12 @@ form  label {
     font-size: 2em;
     border-bottom: 0.15em solid;
       border-bottom-color: #3638b8; 
+    padding: 0.5em;
   }
 
 section.new-tweet {
   width: 100%;
-
+  margin: 2em;
 }
 /* 
 section.new-tweet div {

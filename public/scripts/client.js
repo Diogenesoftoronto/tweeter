@@ -8,7 +8,6 @@ const createTweetElement = (obj) => {
   $(document).ready(function() {
     const tweetArticle =  
     `<article class="tweet">
-
     <div class='tweet-header'>
       <div class='tweet-header-left'>
         <img class='profile' src=${obj.user.avatars}></img>
@@ -34,37 +33,55 @@ const createTweetElement = (obj) => {
     </div>
     </div>
     </article>`;
-    $('section.tweet-container').append(tweetArticle);
+    $('section.tweet-container').prepend(tweetArticle);
+    tweetInteract();
   })
 
 }
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
+
 const renderTweets = (tweets) => {
   for (const tweet of tweets) {
     createTweetElement(tweet)
   }
 }
-renderTweets(data);
+
+
+const tweetForm = () => {
+  $(document).ready(function() {
+    $('#post-tweet').submit(function (event) {
+      event.preventDefault();
+      
+      const tweetBody = $('#tweet-text').serialize()
+      if (tweetBody.length < 6) {
+        alert('Tweets must be filled with your glory!')
+      } else if (tweetBody.length > 145) {
+        
+        alert('Too Long Did Not Read!')
+      } else {
+        const form = $(this)
+        const url = form.attr('action')
+        $.post(url, tweetBody)
+      }
+    })
+  })
+};
+tweetForm();
+
+const loadTweets = () => {
+  $(document).ready(function() {
+    const url = '/tweets'
+    $.ajax({
+      url: url,
+      method: 'GET',
+      dataType: 'json',
+      success: (tweetPosts) => {
+        console.log(tweetPosts, 'success')
+        renderTweets(tweetPosts)
+      },
+      error: (err) => {
+        console.log("Error: ", err)
+      }
+  })
+});
+}
+loadTweets();

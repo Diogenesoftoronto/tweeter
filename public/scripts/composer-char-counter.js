@@ -18,7 +18,7 @@ const charCounter = () => {
 const tweetInteract = () => {
  $(document).ready(function() {
   //  the style change when the mouse hovers over tweet icons and box shadow emerges when the mouse hovers over the tweet box
-  $('.tweet-container').hover(function() {
+  $('.tweet').hover(function() {
     $(this).css('box-shadow', '0px 0px 5px black');
  
   }, function() {
@@ -35,17 +35,17 @@ const tweetInteract = () => {
 );
 }
 
-// const tweetPost = () => {
+// const createTweetElement = () => {
 //   $('submit').click( () => {
 //   const text = $('<textarea>').val();
 //   $('p.tweet-body').append( text );
 //   });
 // };
 
+// tweetPost();
 
 charCounter();
 tweetInteract();
-// tweetPost();
 
 // export the jquery object to the global namespace
 module.exports = charCounter;

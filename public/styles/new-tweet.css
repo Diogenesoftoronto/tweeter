@@ -67,6 +67,8 @@ output.counter {
   margin: 18px;
   width: 1522px;
   height: 10em;
+  background-color: transparent;
+  border: transparent;
 }
 
 form.tweet-form {
@@ -102,3 +104,20 @@ form.tweet-form {
   display: flex;
   justify-content: space-between;
 }
+
+/*dynamic alert message */
+div.alert {
+  display: flex;
+  justify-content: center;
+  border-radius: 1em;
+  color: #640D14;
+  font-size: 1.2em;
+  font-weight: 600;
+  border: 2px solid;
+  padding: 0.2em;
+  margin: 0.3em;
+}
+
+i.alert {
+ background-color: #800E13; 
+} 

@@ -8,7 +8,7 @@
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-    "created_at": 1639901106741
+    "created_at": 1639959278273
   },
   {
     "user": {
@@ -19,6 +19,17 @@
     "content": {
       "text": "Je pense , donc je suis"
     },
-    "created_at": 1639987506741
+    "created_at": 1640045678273
+  }, 
+  {
+    "user": {
+      "name": "Nietzsche",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@Zara"
+    },
+    "content": {
+      "text": "In Germany there is much complaining about my 'eccentricities.'"
+    },
+    "created_at": 1640045678288
   }
 ]

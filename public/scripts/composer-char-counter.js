@@ -19,7 +19,7 @@ const tweetInteract = () => {
  $(document).ready(function() {
   //  the style change when the mouse hovers over tweet icons and box shadow emerges when the mouse hovers over the tweet box
   $('.tweet').hover(function() {
-    $(this).css('box-shadow', '0px 0px 5px black');
+    $(this).css('box-shadow', '0.2em 0.2em 5px black');
  
   }, function() {
     $(this).css('box-shadow', 'none');
@@ -43,7 +43,19 @@ const tweetInteract = () => {
 // };
 
 // tweetPost();
+const shadowInteract = function() {
+  $(document).ready(function() {
+    $('.alert').hover(function() {
+      $(this).css('box-shadow', '0.2em 0.2em 5px');
+   
+    }, function() {
+      $(this).css('box-shadow', 'none');
+  
+    });
+  })
+}
 
+shadowInteract()
 charCounter();
 tweetInteract();
 

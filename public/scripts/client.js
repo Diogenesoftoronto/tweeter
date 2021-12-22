@@ -3,6 +3,11 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+const esc = function (str) {
+  let para = document.createElement("p");
+  para.appendChild(document.createTextNode(str));
+  return para.innerHTML;
+};
 
 const createTweetElement = (obj) => { 
   $(document).ready(function() {
@@ -18,7 +23,7 @@ const createTweetElement = (obj) => {
       </div>
     </div>
     <div class='tweet-body'>
-      <p>${obj.content.text}</p>
+      <p>${esc(obj.content.text)}</p>
     </div>
     <div class='tweet-footer'>
       <div class='tweet-footer-left'>
@@ -50,14 +55,30 @@ const tweetForm = () => {
   $(document).ready(function() {
     $('#post-tweet').submit(function (event) {
       event.preventDefault();
-      
-      const tweetBody = $('#tweet-text').serialize()
+      const alertShort = 
+      `<div class="alert">
+        <i class="fas fa-exclamation-circle"></i>
+        <span class="alert">Tweets must be filled with your glory!</span>
+      </div>`
+      const alertLong = 
+      `<div class="alert">
+        <i class="fas fa-exclamation-circle"></i>
+        <span class="alert">Too Long Did Not Read!</span>
+      </div>`
+
+      const tweetBody = $('#tweet-text').serialize();
       if (tweetBody.length < 6) {
-        alert('Tweets must be filled with your glory!')
+        // $().html("<label>Tweets must be filled with your glory!</label>").slideDown().slideUp();
+        $('section.new-tweet>h2').prepend(alertShort).slideDown();
+        shadowInteract()
       } else if (tweetBody.length > 145) {
-        
-        alert('Too Long Did Not Read!')
+        $('section.new-tweet>h2').prepend(alertLong);
       } else {
+        if ($("div.alert").val() !== null || $("div.alert").val() !== undefined) {
+          // if the warning is visible slideUp and remove the element.
+          $("div.alert").slideUp().remove();
+
+        }
         const form = $(this)
         const url = form.attr('action')
         $.post(url, tweetBody)
@@ -84,4 +105,12 @@ const loadTweets = () => {
   })
 });
 }
-loadTweets();
+
+const refetchTweets = () => {
+  $(document).ready(function() {
+    $('#post-tweet').submit(function (event) {
+      loadTweets();
+    })
+  })
+}
+refetchTweets()

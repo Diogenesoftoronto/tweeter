@@ -41,8 +41,6 @@ button {
 /* form  */
 form  label {
     font-size: 2em;
-    border-bottom: 0.15em solid;
-      border-bottom-color: #3638b8; 
     padding: 0.5em;
   }
 
@@ -55,25 +53,25 @@ section.new-tweet div {
   display: flex;
 } */
 output.counter {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: flex-end;
-  justify-content: flex-end;
-  align-items: stretch;
+  margin-left: 28em;
+  font-family: 'Bungee';
 }
 
 #tweet-text {
-  margin: 18px;
-  width: 1522px;
-  height: 10em;
+  margin: 1em;
+  width: 35em;
+  height: 3.1em;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom: 0.5em solid;
+  border-bottom-color: #3638b8; 
   background-color: transparent;
-  border: transparent;
+
 }
 
 form.tweet-form {
-  display: flex;
-  flex-direction: column;
+
 }
 .tweet {
   border: 2px solid black;
@@ -116,6 +114,7 @@ div.alert {
   border: 2px solid;
   padding: 0.2em;
   margin: 0.3em;
+  background-color: #AD2831;
 }
 
 i.alert {

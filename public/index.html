@@ -26,58 +26,58 @@
     <script type='text/javascript' src='/scripts/composer-char-counter.js'></script>
     
   </head>
-
+  
   <body>
     <!-- Top nav bar (fixed) -->
-      <nav class="tweet-bar">
-        <span id='unique'><a href="/">tweeter</a></span>
-        <!-- space not appearing here -->
-        <div class="tweet-bar-right">
+    <nav class="tweet-bar">
+      <span id='unique'><a href="/">tweeter</a></span>
+      <div class="tweet-bar-right">
+        <div>
+          <h3 class='tweet-text'><bold class='tweet-text'><a href="/">Write </a></h3>
+          </bold></h3><h3 class='tweet-text'> a new tweet</h3>
+        </div>
+        
+        <i class="fas fa-angle-double-down"></i>
+      </div>
+    </nav>
+    <div class="profile-container">
+      <header>
+        <div>
+          <img class='profile' src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div>
+          <h2>Diogenes of Toronto</h2>
+        </div>
+      </header>
+    </div>
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form id='post-tweet' class='tweet-form' method='POST' action='/tweets'>
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text">Glory to Arstotzka!</textarea>
           <div>
-            <h3 class='tweet-text'><bold class='tweet-text'><a href="/">Write </a></h3>
-            </bold></h3><h3 class='tweet-text'> a new tweet</h3>
+            <button type="submit" class='bouncy'>Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
+        </form>
+      </section>
+      <section class="tweet-container">
+        <article class="tweet">
           
-          <i class="fas fa-angle-double-down"></i>
-        </div>
-      </nav>
-      <div class="profile-container">
-        <header>
-          <div>
-              <img class='profile' src="/images/profile-hex.png"> 
-          </div>
-          <br>
-          <div>
-              <h2>Diogenes of Toronto</h2>
+          <div class='tweet-header'>
+            
+            <div class='tweet-header-left'>
+              <img class='profile' src="/images/profile-hex.png">
+              <h3>Diogenes of Toronto</h3>
             </div>
-          </header>
-        </div>
-        <!-- Page-specific (main) content here -->
-        <main class="container">
-          <section class="new-tweet">
-            <h2>Compose Tweet</h2>
-            <form id='post-tweet' class='tweet-form' method='POST' action='/tweets'>
-              <label for="tweet-text">What are you humming about?</label>
-              <textarea name="text" id="tweet-text"></textarea>
-              <div>
-                <button type="submit" class='bouncy'>Tweet</button>
-                <output name="counter" class="counter" for="tweet-text">140</output>
-              </div>
-            </form>
-          </section>
-          <section class="tweet-container">
-            <article class="tweet">
-
-              <div class='tweet-header'>
-                <div class='tweet-header-left'>
-                  <img class='profile' src="/images/profile-hex.png">
-                  <h3>Diogenes of Toronto</h3>
-                </div>
-                <div class='tweet-header-right'>
-                  <h4>@Diogenes</h4>
-                </div>
-              </div>
-              <div class='tweet-body'>
+            <div class='tweet-header-right'>
+              <h4>@Diogenes</h4>
+            </div>
+          </div>
+          <div class='tweet-body'>
                 <p>If I were not Diogenes, I would still wish to be Diogenes.</p>
               </div>
               <div class='tweet-footer'>
@@ -86,14 +86,16 @@
                 </div>
                 <div class='tweet-footer-right'>
                   <div>
-                  <a class='tweet-icon' href='/'><i class="fas fa-flag"></i></a>
-                  <a class='tweet-icon' href='/'><i class="fas fa-retweet"></i></a>
-                  <a class='tweet-icon' href='/'><i class="fas fa-heart"></i></a>
+                    <a class='tweet-icon' href='/'><i class="fas fa-flag"></i></a>
+                    <a class='tweet-icon' href='/'><i class="fas fa-retweet"></i></a>
+                    <a class='tweet-icon' href='/'><i class="fas fa-heart"></i></a>
+                  </div>
                 </div>
               </div>
-              </div>
-              </article>
+            </article>
           </section>
+          <audio controls><source src='/images/glorytoaristotzka.mp3' type='audio/mpeg'></audio>
         </main>
-  </body>
-</html>
+      </body>
+      </html>
+      

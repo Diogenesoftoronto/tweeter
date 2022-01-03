@@ -39,7 +39,7 @@ button {
 
   /* button end */
 /* form  */
-form  label {
+ label {
     font-size: 2em;
     padding: 0.5em;
   }
@@ -56,20 +56,18 @@ output.counter {
 
 #tweet-text {
   margin: 1em;
-  width: 35em;
+  width: 75%;
   height: 3.1em;
   border-top-color: transparent;
   border-right-color: transparent;
   border-left-color: transparent;
-  border-bottom: 0.5em solid;
+  border-bottom: 3px solid;
   border-bottom-color: #3638b8; 
   background-color: transparent;
-
 }
-
 .tweet {
   border: 2px solid black;
-  width:50%;
+  width: 60%;
   margin: 2em;
   padding: 1em;
 }

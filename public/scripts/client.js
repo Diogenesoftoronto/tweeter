@@ -73,8 +73,8 @@ const loadTweets = () => {
 const refetchTweets = () => {
   $(document).ready(function() {
     $('#post-tweet').submit(function (event) {
-      loadTweets();
-    })
+        loadTweets();
+      })
   })
 }
 

@@ -48,10 +48,7 @@ section.new-tweet {
   width: 100%;
   margin: 2em;
 }
-/* 
-section.new-tweet div {
-  display: flex;
-} */
+
 output.counter {
   margin-left: 28em;
   font-family: 'Bungee';
@@ -70,9 +67,6 @@ output.counter {
 
 }
 
-form.tweet-form {
-
-}
 .tweet {
   border: 2px solid black;
   width:50%;

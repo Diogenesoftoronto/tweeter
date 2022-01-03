@@ -59,7 +59,9 @@ const loadTweets = () => {
       dataType: 'json',
       success: (tweetPosts) => {
         console.log(tweetPosts, 'success')
-        renderTweets(tweetPosts)
+        setTimeout(() => {
+            renderTweets(tweetPosts)
+          }, 600)
       },
       error: (err) => {
         console.log("Error: ", err)
@@ -79,29 +81,35 @@ const refetchTweets = () => {
 const tweetForm = () => {
   $(document).ready(function() {
     $('#post-tweet').submit(function (event) {
+
       event.preventDefault();
+
       const alertShort = 
       `<div class="alert">
         <i class="fas fa-exclamation-circle"></i>
         <span class="alert">Tweets must be filled with your glory!</span>
-      </div>`
+      </div>`;
       const alertLong = 
       `<div class="alert">
         <i class="fas fa-exclamation-circle"></i>
         <span class="alert">Too Long Did Not Read!</span>
-      </div>`
-
+      </div>`;
+      console.log($('div.alert').val(), 'failure')
       const tweetBody = $('#tweet-text').serialize();
-      if (tweetBody.length < 6 ) {
-        // $().html("<label>Tweets must be filled with your glory!</label>").slideDown().slideUp();
-        console.log($('section.new-tweet>h2').val())
-        $('section.new-tweet>h2').prepend(alertShort).slideDown();
+      if (tweetBody.length < 6 && $('div.alert').val() === undefined) {
+        $('section.new-tweet>h2').prepend(alertShort).hide().slideDown();
+        setTimeout(() => {
+          ('div.alert').slideUp();
+        }, 10000)
         shadowInteract()
-        
-      } else if (tweetBody.length > 145) {
-        $('section.new-tweet>h2').prepend(alertLong);
+      } else if (tweetBody.length > 145 && $('div.alert').val() !== undefined) {
+        $('section.new-tweet>h2').prepend(alertLong).hide().slideDown();;
+        // slideUp after ten seconds
+        setTimeout(() => {
+          ('div.alert').slideUp();
+        }, 10000)
         shadowInteract()
-      } else {
+      } else if (tweetBody.length > 6 && tweetBody.length < 145){
         if ($("div.alert").val() !== null || $("div.alert").val() !== undefined) {
           // if the warning is visible slideUp and remove the element.
           $("div.alert").slideUp().remove();

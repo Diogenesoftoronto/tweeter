@@ -35,14 +35,6 @@ const tweetInteract = () => {
 );
 }
 
-// const createTweetElement = () => {
-//   $('submit').click( () => {
-//   const text = $('<textarea>').val();
-//   $('p.tweet-body').append( text );
-//   });
-// };
-
-// tweetPost();
 const shadowInteract = function() {
   $(document).ready(function() {
     $('.alert').hover(function() {

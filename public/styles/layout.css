@@ -17,10 +17,6 @@ html {
  body {
   font-size: 1em;
   font-family: 'Source Sans Pro', sans-serif;
-  /* display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center; */
   background-color: #457B9D;
   width: 100%;
 }
@@ -28,7 +24,6 @@ html {
 
 /* main */
 main.container {
-  /* display: flex; */
   width: 90%;
   align-self: center;
 }

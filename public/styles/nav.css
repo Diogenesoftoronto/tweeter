@@ -23,6 +23,7 @@ h3.tweet-text {
   width: 100%;
   z-index: 1;
 }
+
 div.tweet-bar-right > div {
   display: flex;
 }
@@ -34,6 +35,7 @@ div.tweet-bar-right {
   margin-top: 2em;
   margin-right: 1em;
 }
+
 i.fa-angle-double-down {
   margin-top: 1em;
 }

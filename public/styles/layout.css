@@ -27,6 +27,27 @@ main.container {
   width: 90%;
   align-self: center;
 }
+
+@media (min-width: 768px) {
+  div.profile-container {
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  body {
+   display: flex;
+  }
+ main.container {
+   width: 66.7%;
+   margin-top: 10em;
+ }
+ 
+ header .profile {
+   height: 15rem;
+   width: 15rem;
+ }
+}
 /* main end */
 
 /* do stuff here later */

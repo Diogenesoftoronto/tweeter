@@ -18,22 +18,20 @@ const charCounter = () => {
 const tweetInteract = () => {
  $(document).ready(function() {
   //  the style change when the mouse hovers over tweet icons and box shadow emerges when the mouse hovers over the tweet box
-  $('.tweet').hover(function() {
-    $(this).css('box-shadow', '0.2em 0.2em 5px black');
- 
-  }, function() {
-    $(this).css('box-shadow', 'none');
+    $('.tweet').hover(function() {
+      $(this).css('box-shadow', '0.2em 0.2em 5px black');
+  
+    }, function() {
+      $(this).css('box-shadow', 'none');
 
+    });
+    $('.tweet-icon').hover(function() {   
+    $(this).css('opacity', '0.5');
+    }, function() {
+      $(this).css('opacity', '1');
+    });
   });
-  $('.tweet-icon').hover(function() {   
-  $(this).css('opacity', '0.5');
-  }, function() {
-    $(this).css('opacity', '1');
-  }
-);
-}
-);
-}
+};
 
 const shadowInteract = function() {
   $(document).ready(function() {

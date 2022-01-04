@@ -15,4 +15,10 @@ This repository is the starter code for the project: Students will fork and clon
 ## Dependencies
 
 - Express
+- body-parser
+- chance
+- jquery
 - Node 5.10.x or above
+
+## images
+ 1. [first thing you will see in tweeter](./public/images/tweeterbegin.png)

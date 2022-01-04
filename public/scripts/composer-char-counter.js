@@ -32,7 +32,7 @@ const tweetInteract = () => {
     });
   });
 };
-
+// gives a box shadow to the alert messages
 const shadowInteract = function() {
   $(document).ready(function() {
     $('.alert').hover(function() {

@@ -77,20 +77,16 @@ const refetchTweets = () => {
 }
 
 const clearTextarea = () => {
-  $(document).ready(function() {
-    $('#post-tweet').submit(function (event) {
-      // clear text and reset counter to 1440
+      // clear text and reset counter to 140
       $('#tweet-text').val('');
       $('.counter').text(140);
-    })
-  })
 }
 
 
 // controls the tweet form
 const tweetForm = () => {
   $(document).ready(function() {
-    $('#post-tweet').submit(function (event) {
+    $('#post-tweet').submit( function (event) {
       
       event.preventDefault();
       // html element for tweet beeing too short
@@ -112,19 +108,20 @@ const tweetForm = () => {
         $('section.new-tweet>h2').prepend(alertShort).hide().slideDown();
         setTimeout(() => {
           $('div.alert').slideUp();
-        }, 1000);
+        }, 5000);
         // give the error message shadows
         shadowInteract();
         // if tweet is too long alert
-      } else if (tweetBody.length > 145 && $('div.alert').val() !== undefined) {
+      } else if (tweetBody.length > 145) {
         $('section.new-tweet>h2').prepend(alertLong).hide().slideDown();
         // slideUp after ten seconds
         setTimeout(() => {
           $('div.alert').slideUp();
-        }, 1000)
+        }, 5000)
 
         shadowInteract()
-      } else if (tweetBody.length > 6 && tweetBody.length < 145){
+        // if tweet is just the right size submit and clear the text box
+      } else if (tweetBody.length > 6 && tweetBody.length < 145) {
         if ($("div.alert").val() !== null || $("div.alert").val() !== undefined) {
           // if the warning is visible slideUp and remove the element.
           $("div.alert").slideUp().remove();
@@ -134,12 +131,15 @@ const tweetForm = () => {
         const url = form.attr('action')
         $.post(url, tweetBody);
       
-        loadTweets();
+        refetchTweets();
         clearTextarea();
 
       }
     })
   })
 };
+// when document ready post tweets.
+refetchTweets();
+// calls the tweetForm function
 tweetForm();
 

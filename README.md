@@ -21,4 +21,7 @@ This repository is the starter code for the project: Students will fork and clon
 - Node 5.10.x or above
 
 ## images
- 1. ![first thing you will see in tweeter](./public/images/tweeterbegin.png?raw=true)
+![first thing you will see in tweeter](./public/images/tweeterbegin.png?raw=true)
+![destop tweets loaded!](./public/images/desktoptweeter.png)
+![start of the mobile view](./public/images/profilemobiletweeter.png)
+![mobile tweets loaded](./public/images/mobiletweeter.png)

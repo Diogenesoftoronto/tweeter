@@ -7,42 +7,55 @@ button {
   border-radius: 0.12em;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: 'Bungee';
+  font-family: "Bungee";
   font-weight: 300;
   color: #f0f0f5;
   text-align: center;
   transition: all 0.2s;
-  background-color: #4056A1;
+  background-color: #4056a1;
 }
 .bouncy {
   animation: bouncy 5s infinite linear;
   animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: none;
-    animation-play-state: running;
-    animation-name: bouncy;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: bouncy;
   position: relative;
 }
-  @keyframes bouncy {
-
-  0%{top:0em}
-  40%{top:0em}
-  43%{top:-0.9em}
-  46%{top:0em}
-  48%{top:-0.4em}
-  50%{top:0em}
-  100%{top:0em;}
+@keyframes bouncy {
+  0% {
+    top: 0em;
   }
+  40% {
+    top: 0em;
+  }
+  43% {
+    top: -0.9em;
+  }
+  46% {
+    top: 0em;
+  }
+  48% {
+    top: -0.4em;
+  }
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
+}
 
-  /* button end */
+/* button end */
 /* form  */
- label {
-    font-size: 2em;
-    padding: 0.5em;
-  }
+label {
+  font-size: 2em;
+  padding: 0.5em;
+}
 
 section.new-tweet {
   width: 100%;
@@ -51,7 +64,7 @@ section.new-tweet {
 
 output.counter {
   margin-left: 28em;
-  font-family: 'Bungee';
+  font-family: "Bungee";
 }
 
 #tweet-text {
@@ -62,7 +75,7 @@ output.counter {
   border-right-color: transparent;
   border-left-color: transparent;
   border-bottom: 3px solid;
-  border-bottom-color: #3638b8; 
+  border-bottom-color: #3638b8;
   background-color: transparent;
 }
 .tweet {
@@ -70,11 +83,12 @@ output.counter {
   width: 60%;
   margin: 2em;
   padding: 1em;
+  word-break: break-all;
+
 }
 .tweet-header {
   display: flex;
   justify-content: space-between;
-
 }
 
 .tweet-header-left {
@@ -100,15 +114,15 @@ div.alert {
   display: flex;
   justify-content: center;
   border-radius: 1em;
-  color: #640D14;
+  color: #640d14;
   font-size: 1.2em;
   font-weight: 600;
   border: 2px solid;
   padding: 0.2em;
   margin: 0.3em;
-  background-color: #AD2831;
+  background-color: #ad2831;
 }
 
 i.alert {
- background-color: #800E13; 
-} 
+  background-color: #800e13;
+}

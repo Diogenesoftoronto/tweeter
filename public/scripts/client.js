@@ -47,10 +47,9 @@ const clearTweets = () => {
     $(".tweet-container").empty();
   }
   )};
-clearTweets();
-
-const renderTweets = (tweets) => {
-  $(document).ready(function() {
+  
+  const renderTweets = (tweets) => {
+    $(document).ready(function() {
     for (const tweet of tweets) {
       $('section.tweet-container').prepend(createTweetElement(tweet));
       tweetInteract();
@@ -78,16 +77,16 @@ const loadTweets = () => {
 
 const refetchTweets = () => {
   $(document).ready(function() {
-    $('#post-tweet').submit(function (event) {
+      // clear the tweets
+      clearTweets();
       loadTweets();
-    })
   })
 }
 
 const clearTextarea = () => {
-      // clear text and reset counter to 140
-      $('#tweet-text').val('');
-      $('.counter').text(140);
+  // clear text and reset counter to 140
+  $('#tweet-text').val('');
+  $('.counter').text(140);
 }
 
 
@@ -100,16 +99,16 @@ const tweetForm = () => {
       // html element for tweet beeing too short
       const alertShort = 
       `<div class="alert">
-        <i class="fas fa-exclamation-circle"></i>
+      <i class="fas fa-exclamation-circle"></i>
         <span class="alert">Tweets must be filled with your glory!</span>
-      </div>`;
-      // html element for tweet being too long
-      const alertLong = 
-      `<div class="alert">
+        </div>`;
+        // html element for tweet being too long
+        const alertLong = 
+        `<div class="alert">
         <i class="fas fa-exclamation-circle"></i>
         <span class="alert">Too Long Did Not Read!</span>
-      </div>`;
-      const tweetBody = $('#tweet-text').val();
+        </div>`;
+        const tweetBody = $('#tweet-text').val();
       console.log("tweetbody length", tweetBody.length,"tweetbody", tweetBody);
       const objTweetBody = {
         text: tweetBody
@@ -132,27 +131,28 @@ const tweetForm = () => {
           $('div.alert').slideUp();
         }, 5000)
         console.log("tweetbody if greater than 146", tweetBody.length, tweetBody);
-
+        
         shadowInteract()
         // if tweet is just the right size submit and clear the text box
       } else if (tweetBody.length > 0 && tweetBody.length < 141) {
         if ($("div.alert").val() !== null || $("div.alert").val() !== undefined) {
           // if the warning is visible slideUp and remove the element.
           $("div.alert").slideUp().remove();
-
+          
         }
         const form = $(this)
         const url = form.attr('action')
         $.post(url, objTweetBody);
-      
+        // load the tweets again
         refetchTweets();
+        // clear the text area
         clearTextarea();
-
+        
       }
     })
   })
 };
-loadTweets();
-// calls the tweetForm function
+
+refetchTweets();
 tweetForm();
 
